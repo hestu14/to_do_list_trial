@@ -1,3 +1,4 @@
+import { findByLabelText } from '@testing-library/react';
 import { useState } from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm';
@@ -11,10 +12,16 @@ function App() {
   }
 
 
-
   return (
-    <div className="App">
-      <h1>React To Do List</h1>
+    <div className="App" style={{
+      display: "flex",
+      justifyContent: "center",
+      textAlign: "center",
+      flexDirection: "column"
+    }}>
+      <h1 style={{
+        color: "white"
+      }}>React To Do List</h1>
       <TodoForm addTodo={addTodo}/>
       <TodoList todos={todos} />
     </div>
